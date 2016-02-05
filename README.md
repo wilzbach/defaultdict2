@@ -1,10 +1,13 @@
-defaultdict
-===========
+defaultdict2
+============
 
 Returns a new dictionary-like object
 
-Behaves __exactly__ like Python's defaultdict.
+Behaves __exactly__ like Python's [defaultdict](https://docs.python.org/2/library/collections.html#collections.defaultdict).
 
+```
+npm install --save defaultdict2
+```
 
 `defaultdict(default_factory, initial_dict)`
 
@@ -17,6 +20,7 @@ Getting started
 The first argument is the value for missing keys - it can be a value or function like in Python.
 
 ```
+var defaultdict = require('defaultdict2');
 var p = defaultdict(0);
 p.a++; 
 p.b++;
@@ -58,6 +62,44 @@ var p = defaultdict(()=>defaultdict(0));
 p.a.b++;
 console.log(p);
 // { a: { b: 1 } }
+```
+
+Using in a browser
+------------------
+
+Unfortunately ES6 proxies aren't fully adopted in browsers,
+so this might not work in every browser.
+
+However Edge, FF and Chrome (>49) support it.
+
+### Embedding in your client script
+
+### A) Traditional include
+
+
+```
+<script src="https://cdn.rawgit.com/greenify/defaultdict2/master/src/index.js"></script>
+```
+
+### B) With webpack or browserify
+
+If you use webpack or browserify, please require the browser-part of defaultdict:
+
+```
+var defaultdict = require('defaultdict/browser');
+```
+
+### C) Bower
+
+
+```
+bower install --save defaultdict2
+```
+
+And then the script to your page 
+
+```
+<script src=".../bower_components/defaultdict2/src/index.js"></script>
 ```
 
 Gotchas
