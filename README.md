@@ -3,7 +3,7 @@ defaultdict2
 
 Returns a new dictionary-like object
 
-Behaves __exactly__ like Python's [defaultdict](https://docs.python.org/2/library/collections.html#collections.defaultdict).
+Behaves __exactly__ like Python's [defaultdict](https://docs.python.org/3/library/collections.html#collections.defaultdict).
 
 ```
 npm install --save defaultdict2
