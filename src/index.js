@@ -17,7 +17,8 @@ var defaultdict = function(){
         return temp;
     }
 
-    var ignoredProperties = ["inspect", "nodeType", "prototype", "length"];
+    var ignoredProperties = ["inspect", "nodeType", "prototype", "length", "Symbol(Symbol.toStringTag)",
+    "splice"];
 
     function defaultdict(default_factory, starting_dict){
         var handler = {
