@@ -1,5 +1,3 @@
-require('harmony-reflect');
-
 function clone(obj) {
     // from https://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-clone-an-object
     if(obj === null || typeof(obj) !== 'object' || 'isActiveClone' in obj)
@@ -59,6 +57,12 @@ function defaultdict(default_factory, starting_dict){
         }
     };
     starting_dict = starting_dict || {};
-    return new Proxy(starting_dict, handler);
+    if("create" in Proxy){
+        // Node
+        return Proxy.create(starting_dict, handler);
+    }else{
+        // ES6 browsers
+        return new Proxy(starting_dict, handler);
+    }
 }
 module.exports = defaultdict;

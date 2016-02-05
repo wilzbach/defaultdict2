@@ -7,8 +7,7 @@
     "test": "test"
   },
   "dependencies": {
-    "harmonize": "^1.4.4",
-    "harmony-reflect": "^1.4.2"
+    "harmonize": "^1.4.4"
   },
   "devDependencies": {
     "chai": "^3.5.0",
