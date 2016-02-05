@@ -24,20 +24,20 @@ The first argument is the value for missing keys - it can be a value or function
 
 ```
 var defaultdict = require('defaultdict2');
-var p = defaultdict(0);
-p.a++; 
-p.b++;
-console.log(p);
+var d = defaultdict(0);
+d.a++; 
+d.b++;
+console.log(d);
 // { a: 1, b: 1 }
 ```
 
-Same example using a function:
+The same example using a function:
 
 ```
-var p = defaultdict(()=>0);
-p.a++; 
-p.b++;
-console.log(p);
+var d = defaultdict(()=>0);
+d.a++; 
+d.b++;
+console.log(d);
 // { a: 1, b: 1 }
 ```
 
@@ -49,9 +49,9 @@ Initial dictionary
 You can add an initial dictionary as second argument.
 
 ```
-var p = defaultdict(0, {a: 1});
-p.b++;
-console.log(p);
+var d = defaultdict(0, {a: 1});
+d.b++;
+console.log(d);
 // { a: 1, b: 1 }
 ```
 
@@ -61,9 +61,9 @@ Nested dictionaries
 There is no limit to your creativity!
 
 ```
-var p = defaultdict(()=>defaultdict(0));
-p.a.b++;
-console.log(p);
+var d = defaultdict(()=>defaultdict(0));
+d.a.b++;
+console.log(d);
 // { a: { b: 1 } }
 ```
 

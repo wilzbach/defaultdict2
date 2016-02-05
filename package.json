@@ -1,6 +1,6 @@
 {
   "name": "defaultdict2",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Dictionary-like object with a handler for missing keys",
   "main": "index.js",
   "directories": {
