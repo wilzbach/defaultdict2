@@ -17,13 +17,15 @@ var defaultdict = function(){
         return temp;
     }
 
-    var ignoredProperties = ["inspect", "nodeType", "prototype", "length", "Symbol(Symbol.toStringTag)",
-    "splice"];
+    var ignoredProperties = ["inspect", "nodeType", "prototype", "length", "splice", "__proto__",
+    ".prototype"];
 
     function defaultdict(default_factory, starting_dict){
         var handler = {
             get: function(target, name){
-                if(name in target){
+                if(name in target || ignoredProperties.indexOf(name) >= 0
+                                  || typeof(name) === "symbol"){
+                    // we need to be careful with default property calls
                     return target[name];
                 }else{
                     const type_instance = typeof default_factory;
@@ -40,14 +42,9 @@ var defaultdict = function(){
                         // stick to the python interface
                         return default_factory;
                     }
-                    // we need to be careful with default property calls
-                    else if(ignoredProperties.indexOf(name) < 0){
-                        // yep defaultdict assigns the value on get
-                        target[name] = v;
-                        return v;
-                    }else{
-                        //return undefined;
-                    }
+                    // yep defaultdict assigns the value on get
+                    target[name] = v;
+                    return v;
                 }
             },
             set: function(obj, prop, value){
