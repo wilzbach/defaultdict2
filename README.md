@@ -133,3 +133,8 @@ Requirements
 ------------
 
 This depends on ES6 proxies. They should be part of your node version.
+
+License
+-------
+
+The MIT License
