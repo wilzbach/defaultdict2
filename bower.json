@@ -1,0 +1,29 @@
+{
+  "name": "defaultdict2",
+  "description": "Dictionary-like object with a handler for missing keys",
+  "main": "src/index.js",
+  "authors": [
+    "greenify <greenify@notsharingmy.info> (https://github.com/greenify)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "defaultdict",
+    "dictionary",
+    "missing",
+    "default",
+    "default_factory"
+  ],
+  "homepage": "https://github.com/greenify/defaultdict2",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
