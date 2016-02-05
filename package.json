@@ -1,0 +1,37 @@
+{
+  "name": "defaultdict2",
+  "version": "1.0.1",
+  "description": "Dictionary-like object with a handler for missing keys",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "harmonize": "^1.4.4",
+    "harmony-reflect": "^1.4.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greenify/defaultdict2.git"
+  },
+  "keywords": [
+    "defaultdict",
+    "dictionary",
+    "missing",
+    "default",
+    "default_factory"
+  ],
+  "author": "greenify <greenify@notsharingmy.info> (https://github.com/greenify)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/greenify/defaultdict2/issues"
+  },
+  "homepage": "https://github.com/greenify/defaultdict2#readme"
+}
