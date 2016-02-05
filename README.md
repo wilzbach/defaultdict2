@@ -14,6 +14,9 @@ npm install --save defaultdict2
 `default_factory`: value or function to be used for missing keys
 `initial_dict`: (optional) dictionary to start with
 
+See [this live demo](http://jsbin.com/fiqecu/edit?js,console) to check whether
+your browser implements Proxies (Edge, FF, Chrome).
+
 Getting started
 ---------------
 
