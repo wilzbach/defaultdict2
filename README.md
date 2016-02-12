@@ -17,6 +17,8 @@ npm install --save defaultdict2
 See [this live demo](http://jsbin.com/fiqecu/edit?js,console) to check whether
 your browser implements Proxies (Edge, FF, Chrome).
 
+Alternatively here's a [summary blog post](https://seb.wilzba.ch/b/2016/02/defaultdict-in-js) about defaultdict2.
+
 Getting started
 ---------------
 
