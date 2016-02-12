@@ -14,8 +14,7 @@ npm install --save defaultdict2
 `default_factory`: value or function to be used for missing keys
 `initial_dict`: (optional) dictionary to start with
 
-See [this live demo](http://jsbin.com/fiqecu/edit?js,console) to check whether
-your browser implements Proxies (Edge, FF, Chrome).
+↪ Play with this [this live demo](http://jsbin.com/fiqecu/edit?js,console) (ES6 Proxies are supported in Edge, FF, Chrome>=49).
 
 Alternatively here's a [summary blog post](https://seb.wilzba.ch/b/2016/02/defaultdict-in-js) about defaultdict2.
 
@@ -134,7 +133,7 @@ console.log(p.b);
 Requirements
 ------------
 
-This depends on ES6 proxies. They should be part of your node version.
+This depends on ES6 proxies. They should be part of your node version and are implemented in Edge, FF and Chrome(>=49).
 
 License
 -------
